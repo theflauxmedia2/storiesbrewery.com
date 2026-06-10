@@ -1,0 +1,42 @@
+# Stories Brewery — Apache config for Vite/React SPA (storiesbrewery.com)
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve existing files & folders as-is (images, css, js, sitemap, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # All other URLs → index.html (React Router handles /about, /our-brews, /media, etc.)
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Fallback if mod_rewrite is unavailable (some shared hosts)
+<IfModule !mod_rewrite.c>
+  FallbackResource /index.html
+</IfModule>
+
+# WebP support
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>
+
+# Gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Browser caching for static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresDefault "access plus 1 hour"
+</IfModule>

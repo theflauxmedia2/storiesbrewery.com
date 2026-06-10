@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { MapPin, Phone, Clock, Instagram, Facebook, Mail, Star, Users, Utensils } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, Star, Users, Utensils } from "lucide-react";
+import { InstagramIcon, FacebookIcon } from "@/components/icons/SocialIcons";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
@@ -285,7 +286,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="w-14 h-14 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
               >
-                <Instagram className="w-7 h-7 text-white" />
+                <InstagramIcon className="w-7 h-7 text-white" />
               </a>
               <a
                 href="https://facebook.com/storiesbrewery"
@@ -293,7 +294,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="w-14 h-14 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
               >
-                <Facebook className="w-7 h-7 text-white" />
+                <FacebookIcon className="w-7 h-7 text-white" />
               </a>
             </div>
           </div>

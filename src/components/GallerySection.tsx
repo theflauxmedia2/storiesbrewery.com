@@ -1,7 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Camera } from "lucide-react";
+import { Camera } from "lucide-react";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { RESERVATION_LINK } from "@/lib/constants";
 
 const GallerySection = () => {
@@ -87,9 +88,10 @@ const GallerySection = () => {
           {galleryImages.map((image) => (
             <Card key={image.id} className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-lg transition-all duration-300">
               <div className="aspect-square overflow-hidden relative">
-                <img
+                <ResponsiveImage
                   src={image.src}
                   alt={image.alt}
+                  preset="gallery"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 {/* Commented out hover effects and text overlay

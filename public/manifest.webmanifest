@@ -1,0 +1,23 @@
+{
+  "name": "Stories Brewery & Kitchen",
+  "short_name": "Stories Brewery",
+  "description": "Rooftop craft brewery and brewpub in BTM Layout, Bengaluru",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/logos/stbk-128w.webp",
+      "sizes": "128x128",
+      "type": "image/webp"
+    },
+    {
+      "src": "/logos/stbk-256w.webp",
+      "sizes": "256x256",
+      "type": "image/webp"
+    }
+  ]
+}

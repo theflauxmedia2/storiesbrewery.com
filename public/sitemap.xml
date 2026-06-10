@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://storiesbrewery.com/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://storiesbrewery.com/stbr/1-1920w.webp</image:loc>
+      <image:title>Stories Brewery &amp; Kitchen rooftop brewery BTM Layout Bengaluru</image:title>
+      <image:caption>Rooftop craft brewery and nature-infused dining in Bangalore</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://storiesbrewery.com/about</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://storiesbrewery.com/stbr/8-1920w.webp</image:loc>
+      <image:title>About Stories Brewery &amp; Kitchen</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://storiesbrewery.com/our-brews</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://storiesbrewery.com/stdb/11-960w.webp</image:loc>
+      <image:title>Stories Brewery craft beer menu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://storiesbrewery.com/media</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://storiesbrewery.com/blogs/1-800w.webp</image:loc>
+      <image:title>Stories Brewery press and blog</image:title>
+    </image:image>
+  </url>
+</urlset>

@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { RESERVATION_LINK } from "@/lib/constants";
 
 const HeroSection = () => {
@@ -32,11 +33,11 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  // Preload adjacent images to reduce perceived latency when sliding
+  // Preload adjacent hero slides at a mid-size variant (not full 1920w)
   useEffect(() => {
     const preload = (src: string) => {
       const img = new Image();
-      img.src = src;
+      img.src = src.replace(/\.webp$/i, "-1080w.webp");
       img.decoding = "async";
     };
     const next = slides[(currentSlide + 1) % slides.length]?.image;
@@ -63,14 +64,13 @@ const HeroSection = () => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img
+          <ResponsiveImage
             src={slide.image}
             alt={`${slide.title} - rooftop brewery in Bangalore (BTM Layout) for craft beer & food`}
             className="w-full h-full object-cover animate-parallax"
+            preset="hero"
+            priority={index === currentSlide}
             loading={index === currentSlide ? "eager" : "lazy"}
-            decoding="async"
-            sizes="100vw"
-            fetchPriority={index === currentSlide ? "high" : "auto"}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/40 to-background/80" />
         </div>

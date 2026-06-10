@@ -7,15 +7,19 @@ import GallerySection from "@/components/GallerySection";
 import Footer from "@/components/Footer";
 import DeveloperCredit from "@/components/DeveloperCredit";
 import SEOHead from "@/components/SEOHead";
+import { PAGE_SEO } from "@/lib/seo";
 
 const Index = () => {
+  const seo = PAGE_SEO.home;
+
   return (
     <>
-      <SEOHead 
-        title="Stories Brewery & Kitchen - Bengaluru's Premier Craft Brewery & Rooftop Dining"
-        description="Stories Brewery & Kitchen is a rooftop brewery and brewpub in Bangalore (BTM Layout) serving craft beer and a full restaurant menu. Come for nature-infused dining, great ambience, live music nights, DJ parties, and celebrations—from date nights to corporate dinners."
-        keywords="brewpub bangalore, brewery bangalore, microbrewery bangalore, craft beer bangalore, best brewery bangalore, best brewpub bangalore, rooftop brewery bangalore, rooftop bar bangalore, live music bar bangalore, dj night pub bangalore, party pub bangalore, pubs in bangalore, nightlife bangalore, brewery restaurant bangalore, brewpub with food bangalore, brewery near btm bangalore, best pubs in btm bangalore"
-        url="https://storiesbrewery.com"
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        image={seo.image}
+        type={seo.ogType}
       />
       <div className="min-h-screen bg-background">
         <Navigation />

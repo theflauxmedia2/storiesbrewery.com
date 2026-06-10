@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import DeveloperCredit from "@/components/DeveloperCredit";
 import SEOHead from "@/components/SEOHead";
+import { PAGE_SEO } from "@/lib/seo";
 
 const About = () => {
   const vibeAreas = [
@@ -63,11 +64,12 @@ const About = () => {
 
   return (
     <>
-      <SEOHead 
-        title="About Stories Brewery & Kitchen - Our Journey & Vision | Bengaluru's Greenest Brewery"
-        description="Learn about Stories Brewery & Kitchen—Bengaluru’s nature-infused rooftop brewery and brewpub restaurant. From craft beer to premium dining, discover spaces designed for date nights, anniversaries, birthday parties, and corporate celebrations."
-        keywords="best brewery bangalore, best brewpub bangalore, rooftop restaurants bangalore, romantic dinner bangalore, date night bangalore, candlelight dinner bangalore, private dining bangalore, corporate party venue bangalore, birthday party pub bangalore"
-        url="https://storiesbrewery.com/about"
+      <SEOHead
+        title={PAGE_SEO.about.title}
+        description={PAGE_SEO.about.description}
+        keywords={PAGE_SEO.about.keywords}
+        image={PAGE_SEO.about.image}
+        type={PAGE_SEO.about.ogType}
       />
       <div className="min-h-screen bg-background">
         <Navigation />

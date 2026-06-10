@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import DeveloperCredit from "@/components/DeveloperCredit";
 import SEOHead from "@/components/SEOHead";
+import { PAGE_SEO } from "@/lib/seo";
 import { RESERVATION_LINK } from "@/lib/constants";
 
 const OurBrews = () => {
@@ -178,11 +179,12 @@ const OurBrews = () => {
 
   return (
     <>
-      <SEOHead 
-        title="Our Craft Brews - Stories Brewery Beer Menu | Handcrafted Beers Bengaluru"
-        description="Explore craft beer in Bangalore at Stories Brewery & Kitchen—fresh in-house brews, ciders, and seasonal specials. Perfect for beer lovers, craft beer lovers, and anyone wondering where to drink craft beer in Bengaluru."
-        keywords="craft beer bangalore, best craft beer bangalore, craft beer near me, where to drink craft beer bangalore, beer lovers bangalore, craft beer lovers bangalore, microbrewery bangalore, brewery bangalore, best brewery ambience bangalore"
-        url="https://storiesbrewery.com/our-brews"
+      <SEOHead
+        title={PAGE_SEO.ourBrews.title}
+        description={PAGE_SEO.ourBrews.description}
+        keywords={PAGE_SEO.ourBrews.keywords}
+        image={PAGE_SEO.ourBrews.image}
+        type={PAGE_SEO.ourBrews.ogType}
       />
       <div className="min-h-screen bg-background">
         <Navigation />

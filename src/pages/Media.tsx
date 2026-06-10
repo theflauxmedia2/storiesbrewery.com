@@ -1,11 +1,13 @@
 import Navigation from "@/components/Navigation";
-import { ExternalLink, MapPin, Calendar, User, ArrowRight } from "lucide-react";
+import ResponsiveImage from "@/components/ResponsiveImage";
+import { ExternalLink, Calendar, User, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Footer from "@/components/Footer";
 import DeveloperCredit from "@/components/DeveloperCredit";
 import SEOHead from "@/components/SEOHead";
+import { PAGE_SEO } from "@/lib/seo";
 
 const Media = () => {
   const pressReleases = [
@@ -14,7 +16,7 @@ const Media = () => {
       excerpt: "Discover the inspiration and journey that led to the creation of Stories Brewery & Kitchen, a unique dining and brewing experience that has captured the hearts of Bengaluru's food and beer enthusiasts.",
       fullDescription: "From conception to creation, this article delves deep into the vision behind Stories Brewery & Kitchen. Learn about the founders' passion for craft brewing, their commitment to creating unique dining experiences, and how they've built a community around great food and exceptional beer.",
       source: "Provoke Lifestyle",
-      thumbnail: "/blogs/1.jpg",
+      thumbnail: "/blogs/1.webp",
       link: "https://provokelifestyle.in/story-behind-stories-bar-kitchen/?utm_source=chatgpt.com",
       publishedDate: "March 2024"
     },
@@ -228,12 +230,12 @@ Stories isn’t just a place to eat and drink. It’s a space where flavor meets
 
   return (
     <>
-      <SEOHead 
-        title="Stories Media – Press & Blog | Experiences across India & Dubai"
-        description="Explore Stories media coverage and read our latest posts. Discover press features, experiences, and insights from our nature‑inspired spaces across India and Dubai."
-        keywords="stories media, press coverage, stories blog, stories india dubai, nature inspired dining, brand stories"
-        url="https://storiesbrewery.com/media"
-        type="article"
+      <SEOHead
+        title={PAGE_SEO.media.title}
+        description={PAGE_SEO.media.description}
+        keywords={PAGE_SEO.media.keywords}
+        image={PAGE_SEO.media.image}
+        type={PAGE_SEO.media.ogType}
       />
       <div className="min-h-screen bg-background">
         <Navigation />
@@ -270,9 +272,10 @@ Stories isn’t just a place to eat and drink. It’s a space where flavor meets
                     {pressReleases.map((post, index) => (
                       <Card key={index} className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                         <div className="aspect-video overflow-hidden">
-                          <img
+                          <ResponsiveImage
                             src={post.thumbnail}
                             alt={post.title}
+                            preset="card"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -330,9 +333,10 @@ Stories isn’t just a place to eat and drink. It’s a space where flavor meets
                       <Card key={index} className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                         <div className="aspect-video overflow-hidden">
                           {post.isPublished ? (
-                            <img
+                            <ResponsiveImage
                               src={post.thumbnail}
                               alt={post.title}
+                              preset="card"
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                           ) : (

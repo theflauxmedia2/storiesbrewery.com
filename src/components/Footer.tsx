@@ -1,4 +1,5 @@
-import { MapPin, Calendar, ArrowRight, Instagram } from "lucide-react";
+import { MapPin, Calendar, ArrowRight } from "lucide-react";
+import { InstagramIcon } from "@/components/icons/SocialIcons";
 import { Button } from "@/components/ui/button";
 import BrandLogo from "@/components/BrandLogo";
 import { RESERVATION_LINK } from "@/lib/constants";
@@ -104,7 +105,7 @@ const Footer = () => {
                       rel="noopener noreferrer"
                       className="w-5 h-5 bg-black rounded flex items-center justify-center hover:scale-110 transition-transform"
                     >
-                      <Instagram className="w-2.5 h-2.5 text-white" />
+                      <InstagramIcon className="w-2.5 h-2.5 text-white" />
                     </a>
                   </div>
                 </div>

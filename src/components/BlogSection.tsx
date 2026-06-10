@@ -1,9 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import blogBreweryInterior from "@/assets/blog-brewery-interior.jpg";
-import blogRooftopDining from "@/assets/blog-rooftop-dining.jpg";
-import blogCraftBeer from "@/assets/blog-craft-beer.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const BlogSection = () => {
   const blogPosts = [
@@ -12,7 +10,7 @@ const BlogSection = () => {
       excerpt: "Discover the inspiration and journey that led to the creation of Stories Brewery & Kitchen, a unique dining and brewing experience.",
       fullDescription: "From conception to creation, this feature article delves deep into the vision behind Stories Brewery & Kitchen. Learn about the founders' passion for craft brewing and their commitment to creating unique dining experiences.",
       source: "Provoke Lifestyle",
-      thumbnail: "/blogs/1.jpg",
+      thumbnail: "/blogs/1.webp",
       link: "https://provokelifestyle.in/story-behind-stories-bar-kitchen",
       publishedDate: "March 2024",
       readTime: "5 min read"
@@ -22,7 +20,7 @@ const BlogSection = () => {
       excerpt: "Experience dining amidst 50,000+ plants in our unique rooftop sanctuary that blends nature with urban sophistication.",
               fullDescription: "Explore how Stories has revolutionized urban dining by creating a nature-infused oasis in the heart of Bengaluru, offering guests an immersive nature experience.",
       source: "Stories Blog",
-      thumbnail: blogRooftopDining,
+      thumbnail: "/blogs/rooftop-dining.webp",
       link: "#",
       publishedDate: "February 2024",
       readTime: "4 min read"
@@ -32,7 +30,7 @@ const BlogSection = () => {
       excerpt: "Learn about our brewing process and the passion behind each handcrafted beer that tells its own unique story.",
       fullDescription: "From wheat IPAs to fruit-infused ciders, discover the artistry and precision that goes into crafting each of our signature brews.",
       source: "Stories Blog", 
-      thumbnail: blogCraftBeer,
+      thumbnail: "/blogs/craft-beer.webp",
       link: "#",
       publishedDate: "January 2024",
       readTime: "6 min read"
@@ -58,9 +56,10 @@ const BlogSection = () => {
           <Card className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-xl transition-all duration-300">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
-                <img
+                <ResponsiveImage
                   src={featuredPost.thumbnail}
                   alt={featuredPost.title}
+                  preset="card"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

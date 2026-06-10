@@ -1,26 +1,38 @@
+import { getResponsiveImage, type ImagePreset } from "@/lib/images";
+
 interface ResponsiveImageProps {
   src: string;
   alt: string;
   className?: string;
+  preset?: ImagePreset;
   sizes?: string;
   loading?: "lazy" | "eager";
   priority?: boolean;
+  /** Skip responsive variants for bundled/imported asset URLs */
+  disableVariants?: boolean;
 }
 
 const ResponsiveImage = ({
   src,
   alt,
   className = "",
-  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  preset = "gallery",
+  sizes,
   loading = "lazy",
-  priority = false
+  priority = false,
+  disableVariants = false,
 }: ResponsiveImageProps) => {
+  const isLocalPublic =
+    !disableVariants && src.startsWith("/") && !src.startsWith("//");
+  const responsive = isLocalPublic ? getResponsiveImage(src, preset) : null;
+
   return (
     <img
-      src={src}
+      src={responsive?.src ?? src}
+      srcSet={responsive?.srcSet}
+      sizes={sizes ?? responsive?.sizes}
       alt={alt}
       className={className}
-      sizes={sizes}
       loading={priority ? "eager" : loading}
       decoding="async"
       fetchPriority={priority ? "high" : "auto"}

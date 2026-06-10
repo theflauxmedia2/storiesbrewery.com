@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const DeveloperCredit = () => {
   return (
@@ -6,9 +6,10 @@ const DeveloperCredit = () => {
       <div className="container mx-auto">
         <div className="flex items-center space-x-3">
           <div className="relative logo-container">
-            <img 
-              src="/flaux.png"
-              alt="Stories Brewery & Coffee Logo" 
+            <ResponsiveImage
+              src="/flaux.webp"
+              alt="The Flaux Media"
+              preset="tiny"
               className="h-10 w-auto brightness-0 invert logo-slide"
             />
           </div>
