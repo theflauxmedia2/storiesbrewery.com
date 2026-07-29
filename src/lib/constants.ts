@@ -1,5 +1,5 @@
 export const RESERVATION_LINK =
-  "https://webbook.wegsoft.com/F8E7D6C5B4A3Z2Y1X0W9";
+  "https://widget.reservego.co/reserveOutlets/653e6e8316d6a2476004286e";
 
 
 
