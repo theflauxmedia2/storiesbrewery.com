@@ -19,6 +19,8 @@ const Index = () => {
         description={seo.description}
         keywords={seo.keywords}
         image={seo.image}
+        imageWidth={1920}
+        imageHeight={1280}
         type={seo.ogType}
       />
       <div className="min-h-screen bg-background">

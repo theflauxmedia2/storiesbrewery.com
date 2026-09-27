@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import {
   SITE_NAME,
-  SITE_URL,
   TWITTER_HANDLE,
   absoluteUrl,
   buildSchemaGraph,
@@ -14,6 +14,8 @@ interface SEOHeadProps {
   description: string;
   keywords: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   type?: "website" | "article";
   noindex?: boolean;
   structuredData?: object[];
@@ -24,6 +26,8 @@ const SEOHead = ({
   description,
   keywords,
   image = "/stbr/1-1920w.webp",
+  imageWidth,
+  imageHeight,
   type = "website",
   noindex = false,
   structuredData = [],
@@ -34,6 +38,22 @@ const SEOHead = ({
   const robots = noindex
     ? "noindex, nofollow"
     : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
+
+  useLayoutEffect(() => {
+    const dedupe = (selector: string, attr: string, value: string) => {
+      const nodes = [...document.head.querySelectorAll(selector)];
+      const matching = nodes.filter((node) => node.getAttribute(attr) === value);
+      nodes
+        .filter((node) => node.getAttribute(attr) !== value)
+        .forEach((node) => node.remove());
+      matching.slice(0, -1).forEach((node) => node.remove());
+    };
+
+    dedupe('link[rel="canonical"]', "href", canonical);
+    dedupe('meta[name="description"]', "content", description);
+    dedupe('meta[name="robots"]', "content", robots);
+    dedupe('meta[property="og:url"]', "content", canonical);
+  }, [canonical, description, robots]);
 
   const schema = buildSchemaGraph(pathname, structuredData);
 
@@ -59,8 +79,8 @@ const SEOHead = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:secure_url" content={ogImage} />
       <meta property="og:image:alt" content={`${SITE_NAME} — rooftop craft brewery in BTM Layout, Bengaluru`} />
-      <meta property="og:image:width" content="1920" />
-      <meta property="og:image:height" content="1080" />
+      {imageWidth ? <meta property="og:image:width" content={String(imageWidth)} /> : null}
+      {imageHeight ? <meta property="og:image:height" content={String(imageHeight)} /> : null}
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

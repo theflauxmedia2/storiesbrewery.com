@@ -4,12 +4,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import Index from "./pages/Index";
-import About from "./pages/About";
-import OurBrews from "./pages/OurBrews";
-import Media from "./pages/Media";
 import NotFound from "./pages/NotFound";
+
+const About = lazy(() => import("./pages/About"));
+const OurBrews = lazy(() => import("./pages/OurBrews"));
+const Media = lazy(() => import("./pages/Media"));
 
 // ScrollToTop component to handle scroll behavior on route changes
 const ScrollToTop = () => {
@@ -32,14 +33,16 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/our-brews" element={<OurBrews />} />
-            <Route path="/media" element={<Media />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={<div className="min-h-screen bg-background" />}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/our-brews" element={<OurBrews />} />
+              <Route path="/media" element={<Media />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </HelmetProvider>

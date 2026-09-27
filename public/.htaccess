@@ -4,6 +4,19 @@
   RewriteEngine On
   RewriteBase /
 
+  # Apex is the canonical host. www currently returns 200 on Hostinger; this adds the redirect.
+  RewriteCond %{HTTP_HOST} ^www\.storiesbrewery.com$ [NC]
+  RewriteRule ^ https://storiesbrewery.com%{REQUEST_URI} [R=301,L]
+
+  # Keep the .html shells off the public URL. THE_REQUEST ignores internal rewrites.
+  RewriteCond %{THE_REQUEST} \s/+(about|our-brews|media)\.html[\s?] [NC]
+  RewriteRule ^(about|our-brews|media)\.html$ /$1 [R=301,L]
+
+  # Same public URLs as today. Internal rewrite only, including optional trailing slash.
+  RewriteRule ^about/?$ /about.html [L]
+  RewriteRule ^our-brews/?$ /our-brews.html [L]
+  RewriteRule ^media/?$ /media.html [L]
+
   # Serve existing files & folders as-is (images, css, js, sitemap, etc.)
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d

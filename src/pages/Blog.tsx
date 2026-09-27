@@ -74,7 +74,6 @@ const Media = () => {
         title="Stories Brewery Media - Press Coverage & Blog | Bengaluru's Greenest Brewery"
         description="Explore Stories Brewery's media coverage and read our latest blog posts. Discover press releases, brewing insights, and stories from Bengaluru's most innovative brewery."
         keywords="stories brewery media, bengaluru brewery press, craft beer blog, brewery news, stories brewery articles, brewing insights"
-        url="https://storiesbrewery.com/media"
         type="article"
       />
       <div className="min-h-screen bg-background">

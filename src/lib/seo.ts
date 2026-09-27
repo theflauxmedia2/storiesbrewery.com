@@ -71,9 +71,9 @@ export const PAGE_SEO: Record<
 > = {
   home: {
     path: "/",
-    title: `${SITE_NAME} | Best Brewpub & Rooftop Craft Beer in Bengaluru`,
+    title: "Stories Brewery | Best Brewpub & Rooftop Craft Beer, Bengaluru",
     description:
-      "Stories Brewery & Kitchen — BTM Layout's rooftop brewpub with in-house craft beer, nature-infused dining & live music. Reserve your table for date nights, parties & corporate events in Bangalore.",
+      "Stories Brewery & Kitchen in BTM Layout — a rooftop brewpub with in-house craft beer, nature-infused dining and live music in Bengaluru. Book a table.",
     keywords:
       "brewpub bangalore, brewery bangalore, microbrewery bangalore, craft beer bangalore, best brewery bangalore, rooftop brewery bangalore, rooftop bar bangalore, brewery restaurant bangalore, brewpub near me bangalore, brewery near btm layout, live music bar bangalore, party pub bangalore, nightlife bangalore, date night restaurant bangalore",
     ogType: "website",
@@ -81,9 +81,9 @@ export const PAGE_SEO: Record<
   },
   about: {
     path: "/about",
-    title: `About Us | ${SITE_NAME} — Bengaluru's Greenest Rooftop Brewery`,
+    title: "About Us | Bengaluru's Greenest Rooftop Brewery",
     description:
-      "Discover Stories Brewery & Kitchen — founded by Nerall Bhakai. 50,000+ plants, four themed zones (Amazon, Maze, Brew, Penthouse), craft beer & global cuisine in BTM Layout, Bengaluru.",
+      "Stories Brewery & Kitchen, founded by Nerall Bhakai. 50,000+ plants and four zones — Amazon, Maze, Brew and Penthouse — in BTM Layout, Bengaluru.",
     keywords:
       "about stories brewery, rooftop restaurant bangalore, nature dining bangalore, romantic dinner bangalore, date night bangalore, private dining bangalore, corporate party venue bangalore, birthday party pub bangalore, best rooftop restaurants bangalore",
     ogType: "website",
@@ -91,9 +91,9 @@ export const PAGE_SEO: Record<
   },
   ourBrews: {
     path: "/our-brews",
-    title: `Craft Beer Menu | ${SITE_NAME} — In-House Brews Bengaluru`,
+    title: "Craft Beer Menu | Stories Brewery Brewpub, Bengaluru",
     description:
-      "Explore 12+ handcrafted beers at Stories Brewery BTM Layout — Wheat IPA, Jamun Witbier, Hefeweizen, ciders & seasonal brews. Bangalore's best craft beer menu at a rooftop microbrewery.",
+      "12+ in-house beers at Stories Brewery, BTM Layout — Wheat IPA, Jamun Witbier, Hefeweizen, ciders and seasonal brews on a Bengaluru rooftop.",
     keywords:
       "craft beer menu bangalore, best craft beer bangalore, craft beer near me, wheat beer bangalore, witbier bangalore, craft cider bangalore, microbrewery beer menu, brewery bangalore beers, where to drink craft beer bangalore",
     ogType: "website",
@@ -101,9 +101,9 @@ export const PAGE_SEO: Record<
   },
   media: {
     path: "/media",
-    title: `Press & Blog | ${SITE_NAME} — Media Coverage & Brewing Stories`,
+    title: "Press & Blog | Stories Brewery & Kitchen, Bengaluru",
     description:
-      "Read press features and blog posts from Stories Brewery & Kitchen — craft brewing insights, sustainability, food & beer pairing guides, and media coverage from Bengaluru's greenest brewpub.",
+      "Press features and blog posts from Stories Brewery & Kitchen — brewing, sustainability, and food and beer pairing at Bengaluru's greenest brewpub.",
     keywords:
       "stories brewery press, stories brewery blog, craft beer blog bangalore, brewery media coverage, stories bar kitchen review, microbrewery bangalore news",
     ogType: "article",
@@ -117,8 +117,9 @@ export function absoluteUrl(path: string): string {
 }
 
 export function canonicalUrl(pathname: string): string {
-  if (pathname === "/") return SITE_URL;
-  return `${SITE_URL}${pathname}`;
+  if (!pathname || pathname === "/") return `${SITE_URL}/`;
+  const clean = pathname.replace(/\/+$/, "");
+  return `${SITE_URL}${clean}`;
 }
 
 function openingHoursSpecification() {
@@ -151,7 +152,7 @@ export function buildWebSiteSchema() {
   return {
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
-    url: SITE_URL,
+    url: `${SITE_URL}/`,
     name: SITE_NAME,
     description: BUSINESS.description,
     publisher: { "@id": `${SITE_URL}/#organization` },

@@ -3,11 +3,15 @@ import ResponsiveImage from "@/components/ResponsiveImage";
 interface BrandLogoProps {
   className?: string;
   size?: "sm" | "md" | "lg";
+  alt?: string;
+  priority?: boolean;
 }
 
 const BrandLogo = ({
   className = "",
   size = "lg",
+  alt = "Stories Brewery & Kitchen",
+  priority = false,
 }: BrandLogoProps) => {
   const sizeClasses = {
     sm: "h-10 w-auto",
@@ -19,9 +23,9 @@ const BrandLogo = ({
     <div className={`logo-container ${className}`}>
       <ResponsiveImage
         src="/logos/stbc.webp"
-        alt="Stories Brewery & Kitchen"
+        alt={alt}
         preset="logo"
-        priority
+        priority={priority}
         className={`${sizeClasses[size]} logo-slide`}
       />
     </div>
