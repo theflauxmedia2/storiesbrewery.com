@@ -121,7 +121,7 @@ const FeaturedBrews = () => {
           </h2>
           <div className="fade-in-up w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8" />
           <p className="fade-in-up text-xl text-foreground/80 max-w-3xl mx-auto">
-            Discover our handcrafted signature beers, each with its own unique story and flavor profile
+            Handcrafted signature beers from the best craft brewery in BTM Layout, each with its own unique story and flavor profile
           </p>
         </div>
 

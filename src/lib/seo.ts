@@ -10,8 +10,8 @@ export const BUSINESS = {
   name: SITE_NAME,
   legalName: "FOOD BUFFS LLP",
   description:
-    "Rooftop microbrewery and brewpub in BTM Layout, Bengaluru — craft beer, nature-infused dining, live music, and celebrations among 50,000+ plants.",
-  telephone: "+91-9876543210",
+    "Rooftop brewery, brewpub and multi-cuisine restaurant in BTM Layout, Bengaluru — in-house craft beer with North Indian, Continental, Chinese, Pan Asian, pizza, pasta, sushi and dimsum, served among 50,000+ plants.",
+  telephone: "+91-80-46809326",
   email: "hello@storiesbrewery.com",
   foundingDate: "2019",
   priceRange: "₹₹",
@@ -39,9 +39,17 @@ export const BUSINESS = {
     "https://www.facebook.com/storiesbrewery",
   ],
   cuisines: [
-    "Indian",
+    "North Indian",
     "Continental",
+    "Chinese",
     "Asian",
+    "Pan Asian",
+    "Italian",
+    "Pizza",
+    "Pasta",
+    "Japanese",
+    "Sushi",
+    "Dim Sum",
     "Bar Food",
     "Craft Beer",
   ],
@@ -71,31 +79,31 @@ export const PAGE_SEO: Record<
 > = {
   home: {
     path: "/",
-    title: `${SITE_NAME} | Best Brewpub & Rooftop Craft Beer in Bengaluru`,
+    title: `Best Brewpub & Rooftop Restaurant in BTM Layout, Bangalore | ${SITE_NAME}`,
     description:
-      "Stories Brewery & Kitchen — BTM Layout's rooftop brewpub with in-house craft beer, nature-infused dining & live music. Reserve your table for date nights, parties & corporate events in Bangalore.",
+      "Stories Brewery & Kitchen — the best brewery & rooftop restaurant in BTM Layout, Bengaluru. In-house craft beer with North Indian, Continental, Chinese, Pan Asian, pizza, pasta, sushi & dimsum. Reserve a table.",
     keywords:
-      "brewpub bangalore, brewery bangalore, microbrewery bangalore, craft beer bangalore, best brewery bangalore, rooftop brewery bangalore, rooftop bar bangalore, brewery restaurant bangalore, brewpub near me bangalore, brewery near btm layout, live music bar bangalore, party pub bangalore, nightlife bangalore, date night restaurant bangalore",
+      "best restaurants in bangalore, best restaurant in btm layout, restaurants in btm layout, best dining in bangalore, best brewery in bangalore, brewery in btm layout, best brewpub in bangalore, brewpub in btm layout, brewpub near me, brewery near me, brewery restaurant near me, rooftop restaurant in btm layout, rooftop brewery in bangalore, north indian restaurant in btm layout, continental restaurant in bangalore, chinese restaurant in btm layout, pan asian restaurant in bangalore, pizza restaurant in btm layout, pasta restaurant in bangalore, sushi restaurant in bangalore, dimsum restaurant in btm layout",
     ogType: "website",
     image: DEFAULT_OG_IMAGE,
   },
   about: {
     path: "/about",
-    title: `About Us | ${SITE_NAME} — Bengaluru's Greenest Rooftop Brewery`,
+    title: `About Us | Best Rooftop Restaurant & Brewpub in Bengaluru — ${SITE_NAME}`,
     description:
-      "Discover Stories Brewery & Kitchen — founded by Nerall Bhakai. 50,000+ plants, four themed zones (Amazon, Maze, Brew, Penthouse), craft beer & global cuisine in BTM Layout, Bengaluru.",
+      "Discover Stories Brewery & Kitchen — a rooftop restaurant & rooftop brewpub in BTM Layout, Bengaluru with 50,000+ plants, four themed zones, craft beer and North Indian, Continental, Asian, pizza, pasta, sushi & dimsum.",
     keywords:
-      "about stories brewery, rooftop restaurant bangalore, nature dining bangalore, romantic dinner bangalore, date night bangalore, private dining bangalore, corporate party venue bangalore, birthday party pub bangalore, best rooftop restaurants bangalore",
+      "about stories brewery, best rooftop restaurant in bangalore, rooftop restaurant in btm layout, rooftop dining in bangalore, rooftop dining in btm layout, best rooftop brewery in bengaluru, rooftop brewpub in bangalore, rooftop brewpub in btm, rooftop restaurant near me, best dining in btm layout, private dining bangalore, corporate party venue bangalore",
     ogType: "website",
     image: "/stbr/8-1920w.webp",
   },
   ourBrews: {
     path: "/our-brews",
-    title: `Craft Beer Menu | ${SITE_NAME} — In-House Brews Bengaluru`,
+    title: `Craft Beer Menu | Best Craft Brewery in Bangalore — ${SITE_NAME}`,
     description:
-      "Explore 12+ handcrafted beers at Stories Brewery BTM Layout — Wheat IPA, Jamun Witbier, Hefeweizen, ciders & seasonal brews. Bangalore's best craft beer menu at a rooftop microbrewery.",
+      "Explore 12+ handcrafted beers at Stories, the best craft brewery in BTM Layout, Bengaluru — Wheat IPA, Jamun Witbier, Hefeweizen, ciders & seasonal brews, poured fresh at our rooftop brewery.",
     keywords:
-      "craft beer menu bangalore, best craft beer bangalore, craft beer near me, wheat beer bangalore, witbier bangalore, craft cider bangalore, microbrewery beer menu, brewery bangalore beers, where to drink craft beer bangalore",
+      "craft brewery in bangalore, best craft brewery in bengaluru, best craft brewery in btm layout, craft brewery near me, best craft brewery near me, craft beer menu bangalore, craft beer near me, brewery in bengaluru, best brewery near btm layout, microbrewery beer menu",
     ogType: "website",
     image: "/stdb/11-960w.webp",
   },
@@ -289,6 +297,35 @@ export function buildCollectionPageSchema() {
   };
 }
 
+// Rendered visibly on the home page and mirrored in FAQPage schema — keep in sync.
+export const HOME_FAQ: Array<{ question: string; answer: string }> = [
+  {
+    question: "Where is Stories Brewery & Kitchen located?",
+    answer:
+      "Stories Brewery & Kitchen is a rooftop brewery and restaurant in BTM Layout, Bengaluru (29th Main Road, BTM 2nd Stage, Karnataka 560076). If you're searching for a brewery near BTM Layout or a brewpub near me in South Bangalore, we're a short drive from HSR Layout, Jayanagar, JP Nagar and Koramangala.",
+  },
+  {
+    question: "Is Stories one of the best restaurants in BTM Layout?",
+    answer:
+      "Stories is one of the best restaurants in BTM Layout and a favourite for dining in Bangalore — a 700+ seat rooftop restaurant with in-house craft beer, a multi-cuisine kitchen, four themed zones and 50,000+ plants.",
+  },
+  {
+    question: "What cuisines does Stories Brewery serve?",
+    answer:
+      "Our kitchen serves North Indian, Continental, Chinese and Pan Asian food, pizza, pasta, sushi and dimsum — all designed to pair with our fresh craft beer.",
+  },
+  {
+    question: "Is Stories a rooftop brewpub?",
+    answer:
+      "Yes. Stories is a rooftop brewpub and rooftop brewery in Bengaluru, brewing craft beer in-house and serving it on an open-air rooftop with rooftop dining across the Amazon, Maze, Brew and Penthouse zones.",
+  },
+  {
+    question: "Can I book a table or host events at Stories Brewery?",
+    answer:
+      "Yes. Reservations are available online. Stories is popular for date nights, birthday parties, corporate dinners, and private celebrations on its rooftop with live music and DJ nights on weekends.",
+  },
+];
+
 export function buildSchemaGraph(
   pathname: string,
   extra: object[] = []
@@ -314,40 +351,11 @@ export function buildSchemaGraph(
     graph.push({
       "@type": "FAQPage",
       "@id": `${SITE_URL}/#faq`,
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Where is Stories Brewery & Kitchen located?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Stories Brewery & Kitchen is located in BTM Layout, Bengaluru (29th Main Road, BTM 2nd Stage, Karnataka 560076) — a rooftop brewpub with in-house craft beer and full restaurant menu.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Does Stories Brewery serve craft beer and food?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Stories is a brewpub with food in Bangalore — serving fresh in-house craft beers (Wheat IPA, Jamun Witbier, Hefeweizen, ciders and more) alongside a global multi-cuisine menu.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I book a table or host events at Stories Brewery?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Reservations are available online. Stories is popular for date nights, birthday parties, corporate dinners, and private celebrations on its rooftop with live music and DJ nights on weekends.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What makes Stories Brewery unique in Bengaluru?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Stories features 50,000+ plants across four themed zones — Amazon, Maze, Brew, and Penthouse — making it one of Bengaluru's most distinctive nature-infused rooftop brewery experiences.",
-          },
-        },
-      ],
+      mainEntity: HOME_FAQ.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
     });
   }
 

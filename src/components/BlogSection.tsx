@@ -124,7 +124,7 @@ const BlogSection = () => {
           <p className="text-sm text-muted-foreground">
             Want to feature Stories in your publication?{" "}
             <a 
-              href="tel:+919876543210" 
+              href="tel:+918046809326" 
               className="text-primary hover:underline font-medium"
             >
               Get in touch

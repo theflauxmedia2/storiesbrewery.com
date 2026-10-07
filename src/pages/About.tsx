@@ -43,12 +43,12 @@ const About = () => {
     {
       icon: Sparkles,
       title: "Fresh, In-House Brewed Craft Beers",
-      description: "Enjoy a rotating tap of signature brews—each handcrafted with precision, passion, and local flair."
+      description: "As a craft brewery in Bengaluru, we pour a rotating tap of signature brews—each handcrafted on site with precision, passion, and local flair."
     },
     {
       icon: ChefHat,
       title: "Global Multi-Cuisine Menu",
-      description: "Savor dishes curated by expert chefs, offering a world of flavors designed to complement every pint."
+      description: "Savor North Indian, Continental, Chinese and Pan Asian dishes alongside pizza, pasta, sushi and dimsum—a world of flavors designed to complement every pint."
     },
     {
       icon: Music,
@@ -80,6 +80,9 @@ const About = () => {
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-foreground mb-6">
                 About Us
+                <span className="block mt-4 text-xl sm:text-2xl lg:text-3xl font-body font-medium text-foreground/85">
+                  A Rooftop Restaurant &amp; Brewpub in BTM Layout, Bengaluru
+                </span>
               </h1>
               <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-6 sm:mb-8" />
               <p className="text-lg sm:text-xl text-foreground/80 leading-relaxed">
@@ -108,7 +111,7 @@ const About = () => {
                     Founded by <span className="text-accent font-semibold">Nerall Bhakai</span>, Stories is built on the belief that great experiences are rooted in nature and brought to life through design, flavor, and storytelling.
                   </p>
                   <p>
-                    Tucked away from the city's chaos, our space is home to over <span className="text-primary font-semibold">50,000 thriving plants</span>, creating a lush rooftop sanctuary like no other in Bengaluru.
+                    Tucked away from the city's chaos, our space is home to over <span className="text-primary font-semibold">50,000 thriving plants</span>, creating a lush rooftop sanctuary that has made us one of the <strong>best rooftop restaurants in Bengaluru</strong>.
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-card to-secondary/30 rounded-2xl p-6 sm:p-8 border border-border/50 order-1 lg:order-2">
@@ -174,7 +177,7 @@ const About = () => {
             
             <div className="text-center mt-12">
               <p className="text-lg text-foreground/80 max-w-4xl mx-auto leading-relaxed">
-                Whether you're catching up with friends, celebrating a milestone, or sipping a handcrafted brew solo, Stories offers a space that fits your mood—and a memory you'll want to relive.
+                Whether you're catching up with friends, celebrating a milestone, or sipping a handcrafted brew solo, Stories offers a space that fits your mood—and a memory you'll want to relive. It's <strong>rooftop dining in Bangalore</strong> the way it should be: open skies, greenery, and a <strong>rooftop brewery</strong> pouring fresh beer a few steps from your table.
               </p>
             </div>
           </div>
@@ -211,10 +214,10 @@ const About = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-foreground mb-6 text-center">
-              Celebrate in Bengaluru’s rooftop brewery
+              Celebrate at Bengaluru’s best rooftop brewpub
             </h2>
             <p className="text-lg sm:text-xl text-foreground/80 leading-relaxed text-center max-w-4xl mx-auto">
-              Stories is a <strong>brewpub with food Bangalore</strong> and a premium dining space for special moments—<strong>date night Bangalore</strong>, <strong>anniversary dinner Bangalore</strong>, <strong>private dining Bangalore</strong>, and group celebrations. Whether you’re looking for a <strong>best place to celebrate Bangalore</strong>, a <strong>corporate party venue Bangalore</strong>, or a cosy rooftop table, we make it feel like an occasion.
+              Stories is a <strong>rooftop brewpub in Bangalore</strong> and one of the <strong>best dining</strong> spaces in BTM Layout for special moments—<strong>date night Bangalore</strong>, <strong>anniversary dinner Bangalore</strong>, <strong>private dining Bangalore</strong>, and group celebrations. Whether you’re looking for a <strong>best place to celebrate Bangalore</strong>, a <strong>corporate party venue Bangalore</strong>, or a cosy rooftop table, we make it feel like an occasion.
             </p>
           </div>
         </div>

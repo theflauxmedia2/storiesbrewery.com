@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = 2026;
 
   const locations = [
-    { name: "BTM Layout", phone: "+91 98765 43210" }
+    { name: "BTM Layout", phone: "080-46809326" }
   ];
 
   const quickLinks = [
@@ -32,7 +32,7 @@ const Footer = () => {
                 Where every visit tells a new story.
               </p>
               <p className="text-foreground/60 text-sm leading-relaxed">
-                Looking for a <strong>brewpub bangalore</strong> or a <strong>brewery near me</strong> in the BTM area? Stories is a <strong>brewpub restaurant Bangalore</strong>—a rooftop spot for <strong>craft beer Bangalore</strong>, great food, and celebrations.
+                Looking for a <strong>brewpub near me</strong> or the <strong>best restaurant in BTM Layout</strong>? Stories is a <strong>rooftop brewery in Bangalore</strong> serving craft beer with North Indian, Continental, Chinese, Pan Asian, pizza, pasta, sushi and dimsum.
               </p>
             </div>
             
@@ -94,7 +94,7 @@ const Footer = () => {
                   <p className="text-foreground/80 font-medium mb-2">{location.name}</p>
                   <div className="flex items-center justify-center lg:justify-start gap-3">
                     <a 
-                      href={`tel:${location.phone}`}
+                      href="tel:+918046809326"
                       className="text-foreground/60 hover:text-accent transition-colors text-xs"
                     >
                       {location.phone}

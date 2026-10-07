@@ -199,12 +199,12 @@ const OurBrews = () => {
               </h1>
               <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-6 sm:mb-8" />
               <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 mb-6 sm:mb-8 leading-relaxed">
-                Explore the carefully crafted beers brewed in-house at Stories Brewery & Kitchen. 
+                Explore the carefully crafted beers brewed in-house at Stories Brewery & Kitchen, the best craft brewery in BTM Layout. 
                 Whether you're a hop head, a fruit-forward fan, or a wheat beer lover, there's a fresh 
                 pour waiting to tell your story.
               </p>
               <p className="text-base sm:text-lg text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-                From crisp, easy-drinking pours to bold seasonal releases, this is <strong>craft beer Bangalore</strong> made for rooftop afternoons and late-night conversations—ideal for anyone searching <strong>craft beer near me</strong> in Bengaluru.
+                From crisp, easy-drinking pours to bold seasonal releases, this is a <strong>craft brewery in Bangalore</strong> made for rooftop afternoons and late-night conversations—ideal for anyone searching for a <strong>craft brewery near me</strong> or the <strong>best brewery in Bengaluru</strong>. Pair your pint with our <a href="/" className="text-accent hover:underline">multi-cuisine restaurant</a> menu.
               </p>
             </div>
           </div>

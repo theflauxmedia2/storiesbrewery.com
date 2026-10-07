@@ -10,28 +10,28 @@ const GallerySection = () => {
     {
       id: 1,
       src: "/stbr/3.webp",
-      alt: "Bengaluru Brewery Interior - Cozy dining atmosphere",
+      alt: "Cozy dining area at Stories, a brewery restaurant in BTM Layout, Bengaluru",
       location: "Bengaluru",
       title: "Cozy Dining Area"
     },
     {
       id: 2,
       src: "/stbr/4.webp", 
-      alt: "Bengaluru Brewery Garden View",
+      alt: "Garden view at Stories rooftop brewpub in Bangalore",
       location: "Bengaluru",
       title: "Garden Oasis"
     },
     {
       id: 3,
       src: "/stbr/6.webp",
-      alt: "Bengaluru Rooftop Ambiance",
+      alt: "Rooftop dining ambiance at Stories, BTM Layout, Bengaluru",
       location: "Bengaluru", 
       title: "Rooftop Vibes"
     },
     {
       id: 4,
       src: "/stbr/7.webp",
-      alt: "Bengaluru Brewery Interior",
+      alt: "Interior of Stories Brewery & Kitchen, a brewery in BTM Layout",
       location: "Bengaluru",
       title: "Modern Interior"
     },

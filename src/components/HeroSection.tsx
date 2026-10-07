@@ -66,7 +66,7 @@ const HeroSection = () => {
         >
           <ResponsiveImage
             src={slide.image}
-            alt={`${slide.title} - rooftop brewery in Bangalore (BTM Layout) for craft beer & food`}
+            alt={`${slide.title} — best rooftop brewery and restaurant in BTM Layout, Bangalore`}
             className="w-full h-full object-cover animate-parallax"
             preset="hero"
             priority={index === currentSlide}
@@ -88,6 +88,9 @@ const HeroSection = () => {
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 leading-tight">
                 {slides[currentSlide].title}
+                <span className="block mt-3 text-lg md:text-2xl lg:text-3xl font-body font-medium text-foreground/85">
+                  Rooftop Brewpub &amp; Restaurant in BTM Layout, Bangalore
+                </span>
               </h1>
               
               {/* <p className="text-xl md:text-2xl text-foreground/80 mb-4 font-light">
