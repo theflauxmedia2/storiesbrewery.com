@@ -124,7 +124,8 @@ const BlogSection = () => {
           <p className="text-sm text-muted-foreground">
             Want to feature Stories in your publication?{" "}
             <a 
-              href="tel:+918046809326" 
+              href="tel:+918046809326"
+              onClick={() => window.gtag_report_conversion?.()}
               className="text-primary hover:underline font-medium"
             >
               Get in touch

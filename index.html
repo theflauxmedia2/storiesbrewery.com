@@ -55,6 +55,25 @@
       gtag('config', 'AW-16510321577');
     </script>
 
+    <!-- Event snippet for Click to call conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16510321577/_1MXCPyLj5QdEKmH3sA9',
+            'value': 1.0,
+            'currency': 'INR',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
   </head>

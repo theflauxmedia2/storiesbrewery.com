@@ -95,6 +95,7 @@ const Footer = () => {
                   <div className="flex items-center justify-center lg:justify-start gap-3">
                     <a 
                       href="tel:+918046809326"
+                      onClick={() => window.gtag_report_conversion?.()}
                       className="text-foreground/60 hover:text-accent transition-colors text-xs"
                     >
                       {location.phone}
